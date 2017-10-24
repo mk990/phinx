@@ -584,8 +584,9 @@ class Table
                 'update' => ''
             ])
              ->addColumn($updatedAtColumnName, 'timestamp', [
-                 'null' => true,
-                 'default' => null
+                 'null' => false,
+                 'default' => 'CURRENT_TIMESTAMP',
+                 'update' => 'CURRENT_TIMESTAMP'
              ]);
 
         return $this;
